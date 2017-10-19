@@ -1,0 +1,5 @@
+{{yield}}
+  {{#each users as |user|}}
+    <li>{{user.login}}</li>
+    <li {{action "showUser" user}}>{{user}}</li>
+  {{/each}}
