@@ -2,7 +2,7 @@ import Service from '@ember/service';
 import ENV from '../config/environment';
 
 export default Service.extend({
-	users() {
+	userList() {
 		// this simulates fetching data across the network
 		return new Ember.RSVP.Promise(function(resolve) {
 			/*Ember.run.later(function() {
@@ -15,5 +15,9 @@ export default Service.extend({
 				resolve(data);
 			});
 		});
+	},
+	
+	isolateUser(){
+		/*console.log( 'this.get("users") = ' , this.get("users") );*/
 	}
 });
