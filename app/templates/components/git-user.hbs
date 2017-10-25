@@ -1,7 +1,7 @@
 {{yield}}
 
 <ul id="git-users">
-  {{#each users as |user|}}
-    <li id="users_{{user.id}}" class="list-group-item {{if user.active "active"}}" {{action "chooseUser" user}}>{{user.login}} , user.active = {{user.active}}</li>
+  {{#each users.members as |user|}}
+    <li id="users_{{user.id}}" class="list-group-item {{if user.active "active"}}" {{action "chooseUser" user}}>{{user.login}}</li>
   {{/each}}
 </ul>

@@ -22,7 +22,7 @@ module.exports = function(environment) {
       // Here you can pass flags/options to your application instance
       // when it is created
 	  API1: {
-		  core: "https://api.github.com/",
+		  core: "https://api.github.com",
 		  users: "orgs/SeeClickFix/members",
 		  repos: "users/:owner/repos",
 		  events: "repos/:owner/:repo/events"
