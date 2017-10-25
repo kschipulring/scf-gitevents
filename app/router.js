@@ -7,9 +7,11 @@ const Router = EmberRouter.extend({
 });
 
 Router.map(function() {
-	this.route('git-users', function() {
-		this.route('repo', { path: '/:id/repo' });
-	});
+    this.route('git-users', function() {
+        this.route('repo', { path: '/:id/repo' }, function() {
+          this.route('event');
+        });
+    });
 });
 
 export default Router;

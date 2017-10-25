@@ -14,8 +14,6 @@ export default DS.RESTSerializer.extend({
 
 		var returner = this._super(store, primarModelClass, payload, id, requestType);
 
-		console.log("returner = ", returner);
-
 		return returner;
 	}
 });
