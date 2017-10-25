@@ -1,1 +1,7 @@
 {{yield}}
+
+<ul id="git-repos">
+	{{#each repos as |repo|}}
+		{{#link-to "git-users.repo" repo.name class="list-group-item " }} {{repo.name}} {{/link-to}}
+	{{/each}}
+</ul>

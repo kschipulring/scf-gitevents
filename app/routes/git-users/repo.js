@@ -1,11 +1,17 @@
 import Route from '@ember/routing/route';
+import ENV from '../../config/environment';
+
+const { set } = Ember;
 
 export default Route.extend({
-	model () {
-		//var currentRoute = this.get('routing').get('currentRouteName');
+	model(params) {
+		//apply the params.id to the temporary variable for the urlParam property in the ENV or environment
+		ENV.TEMP.urlParam.user = params.id;
 
-		//console.log( currentRoute );
+		return this.store.query('repo', {});
+	},
 
-		console.log( this );
+	setupController(controller, model) {
+		set(controller, 'repos', model );
 	}
 });

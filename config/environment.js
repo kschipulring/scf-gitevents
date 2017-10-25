@@ -30,6 +30,13 @@ module.exports = function(environment) {
 	  API2: {
 		  core: "https://developer.github.com/v3/activity/events/types/"
 	  }
+    },
+
+    TEMP: {
+      urlParam: {
+      	user: '',
+      	repo: ''
+      }
     }
   };
 

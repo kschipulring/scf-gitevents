@@ -2,6 +2,6 @@
 
 <ul id="git-users">
 	{{#each users as |user|}}
-		{{#link-to "git-users.repo" user class="list-group-item {{if user.active 'active'}}" }} {{user.login}} {{/link-to}}
+		{{#link-to "git-users.repo" user.login class="list-group-item {{if user.active 'active'}}" }} {{user.login}} {{/link-to}}
 	{{/each}}
 </ul>
