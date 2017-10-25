@@ -17,12 +17,12 @@ export default Component.extend({
 		//this.set('users',  this.store.findAll("users") );
 	},
 	actions: {
-		chooseUser(user) {
+		/*chooseUser(user) {
 			//jQuery, because it gets to the point
 			$("#git-users li").removeClass("active");
 			$("#users_"+user.id).addClass("active");
 			
 			
-		}
+		}*/
 	}
 });
