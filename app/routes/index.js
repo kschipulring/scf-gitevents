@@ -3,6 +3,8 @@ import Route from '@ember/routing/route';
 export default Route.extend({
 	model() {
 		//return this.get('store').findAll('members');
+
+		return this.store.findAll('git-user');
 		
 		/*var returner = new Object();
 
