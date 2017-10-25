@@ -7,3 +7,15 @@
 .row .col-sm-3 .panel .panel-body{
 	padding:0px;
 }
+
+@media (min-width: 768px){
+	.ember-view .col-sm-3 {
+		width: 33%;
+	}
+}
+
+.force-down{
+	position: absolute;
+	top: calc(50% + 40px);
+	width: 100%;
+}

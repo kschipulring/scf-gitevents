@@ -1,7 +1,15 @@
 {{yield}}
 
 <ul id="git-users">
+
+	<br/>
+	<h4>SeeClickFix Developers</h4>
 	{{#each users as |user|}}
 		{{#link-to "git-users.repo" user.login class="list-group-item {{if user.active 'active'}}" }} {{user.login}} {{/link-to}}
 	{{/each}}
+
+	<br/>
+	<h4>others</h4>
+
+	{{#link-to "git-users.repo" 'kschipulring' class="list-group-item" }} kschipulring {{/link-to}}
 </ul>

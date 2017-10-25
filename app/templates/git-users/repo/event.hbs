@@ -1,6 +1,14 @@
 {{outlet}}
 
-100% wrong
-
-events = 
-{{events}}
+<div class="row force-down">
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<h3 class="panel-title">Events</h3>
+		</div>
+		<div class="panel-body">
+			{{#each events as |event|}}
+				<a href="{{event.url}}" target="_blank" class="list-group-item ember-view">ID: {{event.id}}</a>
+			{{/each}}
+		</div>
+	</div>
+</div>
