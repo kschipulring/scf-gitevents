@@ -2,9 +2,9 @@ import EndpointCore from './endpointcore';
 import ENV from '../config/environment';
 
 export default EndpointCore.extend({
-	namespace: "users",
+	namespace: "repos",
 
 	pathForType() {
-		return ENV.TEMP.urlParam.user + '/repos';
+		return ENV.TEMP.urlParam.user + "/" + ENV.TEMP.urlParam.repo + '/events';
 	}
 });

@@ -9,7 +9,7 @@ const Router = EmberRouter.extend({
 Router.map(function() {
     this.route('git-users', function() {
         this.route('repo', { path: '/:id/repo' }, function() {
-          this.route('event');
+          this.route('event', { path: '/:eid/event' });
         });
     });
 });

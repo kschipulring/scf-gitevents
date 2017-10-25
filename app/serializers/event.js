@@ -2,10 +2,14 @@ import DS from 'ember-data';
 
 export default DS.RESTSerializer.extend({
 	normalizeResponse(store, primarModelClass, payload, id, requestType) {
-		payload = {gitUsers: payload};
+		payload = {events: payload};
 
-		for(let i=0; i<payload.gitUsers.length; i++){
-			payload.gitUsers[i].type = "member";
+		for(let i=0; i<payload.events.length; i++){
+			
+			payload.events[i].eventType = payload.events[i].type;
+			payload.events[i].type = "event";
+
+			//https://api.github.com/repos/kschipulring/palmasettemiinc/events
 		}
 
 		console.log("payload = ", payload);
