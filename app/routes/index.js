@@ -1,5 +1,7 @@
 import Route from '@ember/routing/route';
 
+const { set } = Ember;
+
 export default Route.extend({
 	model() {
 		//return this.get('store').findAll('members');
@@ -27,5 +29,9 @@ export default Route.extend({
 		console.log( preModel );
 
 		return preModel;*/
+	},
+
+	setupController(controller, model) {
+		set(controller, 'gitUsers', model );
 	}
 });
