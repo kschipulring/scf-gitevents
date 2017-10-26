@@ -1,4 +1,5 @@
 import DS from 'ember-data';
+import GetEventTypes from '../services/event-type';
 
 export default DS.RESTSerializer.extend({
 	normalizeResponse(store, primarModelClass, payload, id, requestType) {
@@ -15,6 +16,17 @@ export default DS.RESTSerializer.extend({
 
 		var returner = this._super(store, primarModelClass, payload, id, requestType);
 
+
+		var et = new GetEventTypes;
+
+		et.eventTypes().then((types) => {
+			//this.set('joke', cities);
+
+			//console.log( "cities = ", cities );
+
+			console.log( "types = ", types );
+		});
+		
 		return returner;
 	}
 });

@@ -19,3 +19,7 @@
 	top: calc(50% + 40px);
 	width: 100%;
 }
+
+#foo{
+	display: none;
+}
