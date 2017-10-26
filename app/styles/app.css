@@ -8,17 +8,27 @@
 	padding:0px;
 }
 
+.ember-view .col-sm-3 {
+	position: static;
+}
+
+.force-down{
+	/*position: absolute;*/
+	/*top: calc(90% + 40px);*/
+	width: 100%;
+}
+
 @media (min-width: 768px){
 	.ember-view .col-sm-3 {
 		width: 33%;
 	}
+
+	.force-down{
+		/*top: calc(50% + 40px);*/
+	}
 }
 
-.force-down{
-	position: absolute;
-	top: calc(50% + 40px);
-	width: 100%;
-}
+
 
 #foo{
 	display: none;

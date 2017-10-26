@@ -1,14 +1,4 @@
-import EndpointCore from './endpointcore';
+import DS from 'ember-data';
 
-export default EndpointCore.extend({
-	namespace: 'orgs/SeeClickFix',
-	pathForType(){
-		return 'members';
-	}
-
-	/*pathForType() {
-		//return ENV.API1.users;
-		//return "members";
-		return "posts";
-	}*/
+export default DS.JSONAPIAdapter.extend({
 });

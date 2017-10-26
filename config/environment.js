@@ -36,7 +36,8 @@ module.exports = function(environment) {
       urlParam: {
       	user: '',
       	repo: ''
-      }
+      },
+      chosenEvents: []
     }
   };
 

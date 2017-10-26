@@ -1,4 +1,5 @@
 import DS from 'ember-data';
+import GetEventTypes from '../services/event-type';
 
 export default DS.RESTSerializer.extend({
 	normalizeResponse(store, primarModelClass, payload, id, requestType) {

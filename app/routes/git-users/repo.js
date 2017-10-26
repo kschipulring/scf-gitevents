@@ -12,25 +12,6 @@ export default Route.extend({
 		var returner = new Object();
 		returner.repos = this.store.query('repo', {});
 
-		//relying on the service
-		var et = new GetEventTypes;
-
-		et.eventTypePromise().then((types) => {
-			//this.set('joke', cities);
-
-			//console.log( "cities = ", cities );
-
-			console.log( "the event types = ", types );
-
-			//returner.eventTypes = types;
-
-			console.log("window.App.store = ", window.App.store );
-
-			/*window.App.store.createRecord('eventTypes', {
-				list: types
-			});*/
-		});
-
 		return returner;
 	},
 

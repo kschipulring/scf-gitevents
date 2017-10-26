@@ -8,8 +8,6 @@ export default Route.extend({
 		//apply the params.id to the temporary variable for the urlParam property in the ENV or environment
 		ENV.TEMP.urlParam.repo = params.eid;
 
-		console.log(this.get('routeName'));
-
 		return this.store.query('event', {});
 	},
 

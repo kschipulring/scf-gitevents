@@ -8,8 +8,6 @@ export default DS.RESTSerializer.extend({
 			payload.gitUsers[i].type = "member";
 		}
 
-		console.log("payload = ", payload);
-
 		var returner = this._super(store, primarModelClass, payload, id, requestType);
 
 		return returner;

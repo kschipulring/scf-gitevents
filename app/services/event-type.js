@@ -2,6 +2,8 @@ import Service from '@ember/service';
 import ENV from 'scf-gitevents/config/environment';
 
 export default Service.extend({
+	chosenTypes: null,
+
 	init(){
 		//if the local storage is not currently populated with the list, then take the ajax, translate it to a list, then attach the joined list to local storage
 		this.eventTypePromise().then((types) => {
@@ -51,5 +53,11 @@ export default Service.extend({
 			}
 
 		}); // end promise
+	},
+	setSelectedTypes(selectedArr){
+		this.set("chosenTypes", selectedArr);
+	},
+	getSelectedTypes(){
+		return this.get("chosenTypes");
 	}
 });

@@ -1,7 +1,8 @@
 {{yield}}
-
-<ul id="git-event-types">
+<h3>Show selected</h3>
+<select multiple="multiple" id="git-event-types" size="33" class="selectpicker" onchange={{action "chooseTypes"}} value={{target.value}}>
+	<option {{action "deselectAll"}}>ALL</option>
 	{{#each eventTypes as |eventType|}}
-		{{eventType}} <br/>
+		<option>{{eventType}}</option>
 	{{/each}}
-</ul>
+</select>
