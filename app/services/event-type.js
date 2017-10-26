@@ -2,32 +2,54 @@ import Service from '@ember/service';
 import ENV from 'scf-gitevents/config/environment';
 
 export default Service.extend({
-	eventTypes() {
+	init(){
+		//if the local storage is not currently populated with the list, then take the ajax, translate it to a list, then attach the joined list to local storage
+		this.eventTypePromise().then((types) => {
+			localStorage["eventTypes"] = types.join();
+		});
+
+		this._super(...arguments);
+	},
+	getEventTypeSplit(){
+		return localStorage["eventTypes"].split(",");
+	},
+	eventTypePromise(){
 		// get the html from the remote github document
 		return new Ember.RSVP.Promise(function(resolve, reject) {
+			var endArr = [];
 
-			$.get(ENV.APP.API2.core, function(data, status){
+			if( localStorage.hasOwnProperty("eventTypes") ){
+				endArr = localStorage["eventTypes"].split(",");
+			}
 
-				//jQuery time
-				var $div = $("<div>", {id: "foo", "class": "a"});
+			if( endArr.length < 2 ){
+				// get the html from the remote github document
+				$.get(ENV.APP.API2.core, function(data, status){
 
-				$("body").append( $div );
+					//jQuery time
+					var $div = $("<div>", {id: "foo", "class": "a"});
 
-				var res = data.match(/<ul id\="markdown-toc">([\s\S]*?)<\/ul>/g);
+					$("body").append( $div );
 
-				$("#foo").html( res );
+					var res = data.match(/<ul id\="markdown-toc">([\s\S]*?)<\/ul>/g);
 
-				//make array from the temp html ul list
-				var endArr = $( '#markdown-toc li > a' )
-				.map(function() {
-					return $(this).text();
-				}).toArray();
+					$("#foo").html( res );
 
-				//remove temp div, as it is no longer needed
-				$("#foo").remove();
+					//make array from the temp html ul list
+					var endArr = $( '#markdown-toc li > a' )
+					.map(function() {
+						return $(this).text();
+					}).toArray();
 
+					//remove temp div, as it is no longer needed
+					$("#foo").remove();
+
+					resolve( endArr );
+				});  // end ajax request
+			}else{
 				resolve( endArr );
-			});  // end ajax request
+			}
+
 		}); // end promise
 	}
 });

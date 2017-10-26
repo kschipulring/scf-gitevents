@@ -19,13 +19,12 @@ export default DS.RESTSerializer.extend({
 
 		var et = new GetEventTypes;
 
-		et.eventTypes().then((types) => {
-			//this.set('joke', cities);
+		/*et.eventTypes().then((types) => {
 
 			//console.log( "cities = ", cities );
 
-			console.log( "types = ", types );
-		});
+			//console.log( "types = ", types );
+		});*/
 		
 		return returner;
 	}
