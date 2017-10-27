@@ -3,9 +3,6 @@
 This README outlines the details of collaborating on this Ember application.
 The purpose of this app is to present the repositories and associated events of a particular Github user.
 
-#### Read More:
-[https://gist.github.com/gwright/d4a73db35147e5de5553fea7fe03ab11](https://gist.github.com/gwright/d4a73db35147e5de5553fea7fe03ab11)
-
 #### Live example:
 [http://demo-scf-gitevents.3ringprototype.com/](http://demo-scf-gitevents.3ringprototype.com/)
 
