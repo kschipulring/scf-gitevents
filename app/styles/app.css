@@ -33,3 +33,19 @@
 #foo{
 	display: none;
 }
+
+
+.table.table-bordered th{
+	border: 1px solid #CCC;
+	padding: 5px;
+}
+.table.table-bordered td{
+	border: 1px solid #DDD;
+	padding: 5px;
+}
+
+img.avatar-url{
+	width:32px;
+	height:auto;
+	padding-right: 10px;
+}

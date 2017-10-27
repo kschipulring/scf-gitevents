@@ -13,6 +13,9 @@ export default DS.RESTSerializer.extend({
 
 		var returner = this._super(store, primarModelClass, payload, id, requestType);
 
+		//resetting the event type box
+		$("#git-event-types option:selected").prop("selected", false);
+
 		return returner;
 	}
 });
