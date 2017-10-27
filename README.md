@@ -1,7 +1,10 @@
 # scf-gitevents
 
 This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+The purpose of this app is to present the repositories and associated events of a particular Github user.
+
+####Read More:
+[https://gist.github.com/gwright/d4a73db35147e5de5553fea7fe03ab11](https://gist.github.com/gwright/d4a73db35147e5de5553fea7fe03ab11)
 
 ## Prerequisites
 
@@ -23,6 +26,7 @@ You will need the following things properly installed on your computer.
 * `ember serve`
 * Visit your app at [http://localhost:4200](http://localhost:4200).
 * Visit your tests at [http://localhost:4200/tests](http://localhost:4200/tests).
+* PRODUCTION SAMPLE at [http://demo-scf-gitevents.3ringprototype.com/](http://demo-scf-gitevents.3ringprototype.com/)
 
 ### Code Generators
 
